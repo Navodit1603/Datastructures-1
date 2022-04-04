@@ -6,11 +6,11 @@ class Queue<T> implements Iterable<T>{
     public void add(T data){
         LinkedList<T> t = new LinkedList<>(data, null);
         if(this.head == null){
-            this.head = this.tail = t ;
+            this.head = this.tail = t ; //for the first number in the queue. Changing it to the head
         }
         else{
             this.tail.setNextNode(t);
-            t.setPrevNode(this.tail);
+            t.setPrevNode(this.tail); //setting last node as tail
             this.tail = t;
         }
     }
@@ -18,7 +18,7 @@ class Queue<T> implements Iterable<T>{
     public void delete() {
         LinkedList<T> n = this.head.getNext();
         if (n != null) {
-            n.setPrevNode(null);
+            n.setPrevNode(null); // deleting the queue
             this.head = n;
         }else{
             this.head= this.tail= null;
