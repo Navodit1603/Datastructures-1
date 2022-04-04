@@ -1,5 +1,3 @@
-
-
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -8,10 +6,11 @@ public class Menu{
 
   Map<Integer, MenuRow> menu = new HashMap<>();
 
+  // set up for menu
   public Menu(MenuRow[] rows){
     int i = 0;
     for(MenuRow row : rows){
-      menu.put(i++, new MenuRow(row.getChallenge(), row.getAction()));
+      menu.put(i++, new MenuRow(row.getChallenge(), row.getAction())); // number associated with challenge
     }
   }
 
@@ -21,7 +20,7 @@ public class Menu{
 
   public void print() {
         for (Map.Entry<Integer, MenuRow> pair : menu.entrySet()) {
-            System.out.println(pair.getKey() + ": " + pair.getValue().getChallenge());
+            System.out.println(pair.getKey() + ": " + pair.getValue().getChallenge()); //print menu
         }
     }
 
@@ -57,9 +56,10 @@ class Driver{
   public static void main(String[] args){
     MenuRow[] rows = new MenuRow[]{new MenuRow("Exit", () -> main(null)),
                                   new MenuRow("Calculator", () -> Calculator.main(null)),
-                                  new MenuRow("Queues and Stacks", () -> Queue.main(null)),
+                                  new MenuRow("Queues and Stacks", () -> Queue.main(null)),// options with functions
                                   new MenuRow("Matrix", () -> Matrix.main(null)),
                                   new MenuRow("Sorts", () -> Sorts.main(null))};
+    // hash map 
 
     Menu menu = new Menu(rows);
     while(true){

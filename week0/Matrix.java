@@ -1,14 +1,14 @@
 public class Matrix {
     private final int[][] matrix;
 
-    
+    // store matrix
     public Matrix(int[][] matrix) {
         this.matrix = matrix;
     }
 
     
     public String toString() {
-        
+        //nested loop for format
         StringBuilder output = new StringBuilder();
         for (int[] row : matrix) {
             
@@ -20,7 +20,7 @@ public class Matrix {
         return output.toString();
     }
 
-    
+    // backward matrix
     public String reverse() {
         
         StringBuilder output = new StringBuilder();
