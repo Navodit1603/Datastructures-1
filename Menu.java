@@ -78,10 +78,10 @@ class Driver{
                     // run option
                     row.run();
                 } catch (Exception e) {
-                    System.out.printf("Invalid selection %d\n", selection);
+                    System.out.printf("Challenge does not exist %d\n", selection);
                 }
             } catch (Exception e) {
-                System.out.println("Not a number");
+                System.out.println("Enetr a valid number");
             }
     }
   }
