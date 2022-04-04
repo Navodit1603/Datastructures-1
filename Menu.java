@@ -56,7 +56,8 @@ class Driver{
     MenuRow[] rows = new MenuRow[]{new MenuRow("Exit", () -> main(null)),
                                   new MenuRow("Calculator", () -> Calculator.main(null)),
                                   new MenuRow("Queues and Stacks", () -> Queue.main(null)),
-                                  new MenuRow("Matrix", () -> Matrix.main(null))};
+                                  new MenuRow("Matrix", () -> Matrix.main(null)),
+                                  new MenuRow("Sorts", () -> Sorts.main(null))};
 
     Menu menu = new Menu(rows);
     while(true){
