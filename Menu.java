@@ -59,6 +59,8 @@ class Driver{
 
     Menu menu = new Menu(rows);
     while(true){
+      System.out.println("");
+      System.out.println("----------------------------------------");
       System.out.println("Navodit's Data Structures Challenge Labs");
       menu.print();
 
