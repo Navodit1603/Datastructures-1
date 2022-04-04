@@ -9,7 +9,7 @@ public class Sorts {
     public static void Create(ArrayList<Integer> data){
         Random random = new Random();
         for(int i = 0; i < 5000; i++){
-            int x = random.nextInt(501);
+            int x = random.nextInt(501); // fills random numbers 5000 times
             data.add(x);
         }
         // return data;
@@ -26,16 +26,17 @@ public class Sorts {
             for (int j = 0; j < size - i - 1; j++) {
                 if (b_data.get(j) > b_data.get(j + 1)) {
                     // swap arr[j+1] and arr[j]
-                    int temp = b_data.get(j);
+                    int temp = b_data.get(j); // switching if two nums are out of order
                     b_data.set(j, b_data.get(j + 1));
                     b_data.set(j + 1, temp);
-                    switches++;
+                    switches++; // counting switches and comparisons
                 }
                 comparisons++;
             }
         }
-        Instant end = Instant.now();
+        Instant end = Instant.now(); // time capture ends
         timeElapsed = Duration.between(start,end);
+      // Print analysis
         System.out.println("Bubble Sort:");
         //System.out.println(b_data);
         System.out.println("Comparisons: " + comparisons);
