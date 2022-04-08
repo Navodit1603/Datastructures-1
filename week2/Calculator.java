@@ -191,6 +191,8 @@ public class Calculator {
     private Double result;
 
     private Double rpnToResult() {
+        // important that stack is double to allow for precise calculations and prevent
+        // interger rounding and truncation
         Stack<Double> calculation = new Stack<>();
         Double num1 = 0.0, num2 = 0.0; // Initialize the top two numbers in the top of the stack
         for (int i = 0; i < reverse_polish.size(); i++) { // Loop to iterate through the whole array
@@ -223,6 +225,8 @@ public class Calculator {
 
     public static void main(String[] args) {
 
+        // creating an object for each equation, this is defualt input and not user
+        // input
         Calculator simpleMath = new Calculator("100 + 200  * 3");
         System.out.println("Simple Math\n" + simpleMath);
         System.out.println("");
@@ -248,6 +252,7 @@ public class Calculator {
         System.out.println("");
 
         // scanner class
+        // input lines so the user knows what to place in
         Scanner sc = new Scanner(System.in);
         System.out.println("Import Calculations: ");
         String equation = sc.nextLine();
