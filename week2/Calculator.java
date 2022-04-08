@@ -173,6 +173,7 @@ public class Calculator {
 
             case "√":
                 answer = Math.sqrt(num2);
+                // pythagorean theorem calculating "c" value given a and b
             case "PYTHAG":
                 answer = Math.sqrt(Math.pow(num1, 2) + Math.pow(num2, 2));
 
