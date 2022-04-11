@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Menu {
 
-  
+  // I love CSA
   Map<Integer, MenuRow> menu = new HashMap<>();
 
   // set up for menu
