@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Menu {
 
+  // I love CSA
   Map<Integer, MenuRow> menu = new HashMap<>();
 
   // set up for menu
@@ -19,7 +20,7 @@ public class Menu {
   }
 
   public void print() {
-    for (Map.Entry<Integer, MenuRow> pair : menu.entrySet()) {
+    for (Map.Entry<Integer, MenuRow> pair : menu.entrySet()) { // for each
       System.out.println(pair.getKey() + ": " + pair.getValue().getChallenge()); // print menu
     }
   }
@@ -57,10 +58,10 @@ class MenuRow {
 
 class Driver {
   public static void main(String[] args) {
-    MenuRow[] rows = new MenuRow[] { new MenuRow("Exit", () -> main(null)),
+    MenuRow[] rows = new MenuRow[] { new MenuRow("Exit", () -> main(null)), //initializing array list
         new MenuRow("Calculator", () -> Calculator.main(null)),
         new MenuRow("Queues and Stacks", () -> Queue.main(null)), // options with functions
-        new MenuRow("Matrix", () -> Matrix.main(null)),
+        new MenuRow("Matrix", () -> Matrix.main(null)), // Adding Items
         new MenuRow("Sorts", () -> Sorts.main(null)) };
     // hash map
 
